@@ -27,5 +27,5 @@ Add `flutter_fireworks` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_fireworks: ^1.0.4
+  flutter_fireworks: ^1.0.5
 ```

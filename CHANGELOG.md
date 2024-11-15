@@ -19,3 +19,7 @@
 ## 1.0.4
 
 - Update GIF previews with fully-qualified URLs.
+
+## 1.0.5
+
+- Update Fireworks Demo configuration.
