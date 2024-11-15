@@ -12,7 +12,10 @@ A beautiful, customizable fireworks effect for Flutter apps, built using the Fla
 
 ## Preview
 
-![Flutter Fireworks Demo](https://github.com/justinschier/flutter_fireworks/demo.gif)
+https://github.com/user-attachments/assets/acd669c2-32f4-4bb2-b695-43cd05655033
+
+https://github.com/user-attachments/assets/cdfa08d9-11bf-46d4-8c3f-1e7e51255b07
+
 
 ## Installation
 
