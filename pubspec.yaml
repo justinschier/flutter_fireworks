@@ -1,0 +1,29 @@
+name: flutter_fireworks
+description: A customizable fireworks effect using the Flame package.
+version: 1.0.0
+homepage: https://github.com/justinschier/flutter_fireworks
+repository: https://github.com/justinschier/flutter_fireworks
+issue_tracker: https://github.com/justinschier/flutter_fireworks/issues
+publish_to: 'https://pub.dev'
+topics:
+  - fireworks
+  - animations
+  - flutter
+  - flame
+  - game-development
+
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: ^1.21.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^6.0.0
