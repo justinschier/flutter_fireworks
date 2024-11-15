@@ -123,7 +123,6 @@ class Rocket extends PositionComponent with HasGameRef<FireworksGame> {
             acceleration: Vector2(0, 100),
             radius: 3,
             baseColor: color,
-            // Use the adjusted fadeOutDuration
             fadeOutDuration: adjustedFadeOutDuration,
           );
         },

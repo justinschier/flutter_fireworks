@@ -12,10 +12,8 @@ A beautiful, customizable fireworks effect for Flutter apps, built using the Fla
 
 ## GIF Previews
 
-<p float="left">
-  <img src="example/lib/flutter_fireworks_multi.gif" alt="Flutter Fireworks Multi Rocket" height="830">
-  <img src="example/lib/flutter_fireworks_single.gif" alt="Flutter Fireworks Single Rocket" height="830">
-</p>
+!["Multi Rocket Demo"](example/demo_gifs/flutter_fireworks_multi.gif)
+!["Single Rocket Demo"](example/demo_gifs/flutter_fireworks_single.gif)
 
 ## Video Previews
 
@@ -29,5 +27,5 @@ Add `flutter_fireworks` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_fireworks: ^1.0.2
+  flutter_fireworks: ^1.0.3
 ```

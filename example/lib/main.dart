@@ -28,6 +28,8 @@ class FireworksDemo extends StatefulWidget {
 
 class _FireworksDemoState extends State<FireworksDemo> {
   final fireworksController = FireworksController(
+    // Define a list of colors for the fireworks explosions
+    // They will be picked randomly from this list for each explosion
     colors: [
       Color(0xFFFF4C40), // Coral
       Color(0xFF6347A6), // Purple Haze
@@ -40,10 +42,15 @@ class _FireworksDemoState extends State<FireworksDemo> {
       Color(0xFFFFD033), // Pastel Yellow
       Color(0xFFFF6F7C), // Pink Grapefruit
     ],
+    // The fastest explosion in seconds
     minExplosionDuration: 0.5,
+    // The slowest explosion in seconds
     maxExplosionDuration: 3.5,
+    // The minimum number of particles in an explosion
     minParticleCount: 125,
+    // The maximum number of particles in an explosion
     maxParticleCount: 275,
+    // The duration for particles to fade out in seconds
     fadeOutDuration: 0.4,
   );
 
@@ -65,8 +72,10 @@ class _FireworksDemoState extends State<FireworksDemo> {
         height: 60,
         child: FloatingActionButton(
           onPressed: () => fireworksController.fireMultipleRockets(
+            // Fire a random number of rockets between 5 and 20
             minRockets: 5,
             maxRockets: 20,
+            // Fire all the rockets within this launch window
             launchWindow: Duration(milliseconds: 600),
           ),
           tooltip: 'Fire Multiple Rockets',
