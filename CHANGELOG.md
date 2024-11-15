@@ -11,3 +11,11 @@
 ## 1.0.2
 
 - Update package description, add docs and preview GIFs.
+
+## 1.0.3
+
+- Update GIF previews, improve inline docs.
+
+## 1.0.4
+
+- Update GIF previews with fully-qualified URLs.
