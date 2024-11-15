@@ -1,4 +1,4 @@
-import 'package:example/starry_background.dart';
+import 'package:fireworks_demo/starry_background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fireworks/flutter_fireworks.dart';
 

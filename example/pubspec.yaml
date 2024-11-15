@@ -1,4 +1,4 @@
-name: example
+name: fireworks_demo
 description: "Flutter Fireworks Demo"
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
