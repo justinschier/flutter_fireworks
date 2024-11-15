@@ -1,6 +1,6 @@
 name: flutter_fireworks
-description: Flutter Fireworks is a customizable fireworks effect for Flutter apps, powered by the Flame engine. Ideal for adding vibrant animations to your UI to celebrate special moments or achievements.
-version: 1.0.1
+description: Flutter Fireworks is a customizable, performant fireworks effect, powered by the Flame engine. Ideal for adding vibrant animations to celebrate special moments or achievements.
+version: 1.0.2
 license: MIT
 homepage: https://github.com/justinschier/flutter_fireworks
 repository: https://github.com/justinschier/flutter_fireworks

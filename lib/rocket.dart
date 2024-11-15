@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:flame/components.dart' hide Timer;
 import 'package:flame/particles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fireworks/lib.dart';
+import 'package:flutter_fireworks/flutter_fireworks.dart';
 
 /// {@template rocket}
 /// A [PositionComponent] that represents a rocket.

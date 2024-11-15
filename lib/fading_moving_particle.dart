@@ -3,7 +3,11 @@ import 'dart:ui';
 import 'package:flame/extensions.dart';
 import 'package:flame/particles.dart';
 
+/// {@template fading_moving_particle}
+/// A particle that fades out over time while moving.
+/// {@endtemplate}
 class FadingMovingParticle extends Particle {
+  /// {@macro fading_moving_particle}
   FadingMovingParticle({
     required double lifespan,
     required this.position,
@@ -14,11 +18,22 @@ class FadingMovingParticle extends Particle {
     required this.fadeOutDuration,
   }) : super(lifespan: lifespan);
 
+  /// The position of the particle.
   final Vector2 position;
+
+  /// The speed of the particle.
   final Vector2 speed;
+
+  /// The acceleration of the particle.
   final Vector2 acceleration;
+
+  /// The radius of the particle.
   final double radius;
+
+  /// The base color of the particle.
   final Color baseColor;
+
+  /// The duration of the fade out effect.
   final double fadeOutDuration;
 
   double _elapsed = 0.0;

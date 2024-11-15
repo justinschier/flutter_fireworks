@@ -1,6 +1,6 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fireworks/lib.dart';
+import 'package:flutter_fireworks/flutter_fireworks.dart';
 
 /// {@template fireworks_display}
 /// A [StatefulWidget] that displays a fireworks animation.
