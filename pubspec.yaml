@@ -4,7 +4,7 @@ version: 1.0.0
 homepage: https://github.com/justinschier/flutter_fireworks
 repository: https://github.com/justinschier/flutter_fireworks
 issue_tracker: https://github.com/justinschier/flutter_fireworks/issues
-publish_to: 'https://pub.dev'
+
 topics:
   - fireworks
   - animations
