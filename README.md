@@ -12,10 +12,9 @@ A beautiful, customizable fireworks effect for Flutter apps, built using the Fla
 
 ## Preview
 
-https://github.com/user-attachments/assets/acd669c2-32f4-4bb2-b695-43cd05655033
+<https://github.com/user-attachments/assets/acd669c2-32f4-4bb2-b695-43cd05655033>
 
-https://github.com/user-attachments/assets/cdfa08d9-11bf-46d4-8c3f-1e7e51255b07
-
+<https://github.com/user-attachments/assets/cdfa08d9-11bf-46d4-8c3f-1e7e51255b07>
 
 ## Installation
 
@@ -23,5 +22,5 @@ Add `flutter_fireworks` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_fireworks: ^1.0.0
+  flutter_fireworks: ^1.0.1
 ```
