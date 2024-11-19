@@ -19,7 +19,9 @@ class Rocket extends PositionComponent with HasGameRef<FireworksGame> {
     required this.minParticleCount,
     required this.maxParticleCount,
     required this.fadeOutDuration,
-  }) : rocketColor = rocketColor ?? Colors.pinkAccent {
+    Random? random,
+  })  : rocketColor = rocketColor ?? Colors.pinkAccent,
+        random = random ?? Random() {
     size = Vector2(4, 20);
     anchor = Anchor.center;
   }
@@ -45,15 +47,23 @@ class Rocket extends PositionComponent with HasGameRef<FireworksGame> {
   /// Duration for particles to fade out, in seconds.
   final double fadeOutDuration;
 
+  /// Random number generator for predictable randomness in tests.
+  final Random random;
+
   late Paint paint;
   late Vector2 startPosition;
   late Vector2 targetPosition;
   double elapsedTime = 0;
-  final Random random = Random();
+
+  // Fields to store values for testing
+  double? explosionDuration;
+  double? adjustedFadeOutDuration;
+  int? particleCount;
 
   @override
   Future<void> onLoad() async {
-    super.onLoad();
+    await super.onLoad(); // Await the super.onLoad()
+
     paint = Paint()..color = rocketColor;
 
     final startX = gameRef.size.x * (0.2 + random.nextDouble() * 0.6);
@@ -82,7 +92,7 @@ class Rocket extends PositionComponent with HasGameRef<FireworksGame> {
     if (t >= 1.0) {
       explode();
       removeFromParent();
-    } else {}
+    }
   }
 
   @override
@@ -92,6 +102,7 @@ class Rocket extends PositionComponent with HasGameRef<FireworksGame> {
     canvas.drawRect(size.toRect(), paint);
   }
 
+  /// Calculates a point along a quadratic Bezier curve at parameter [t].
   Vector2 quadraticBezier(Vector2 p0, Vector2 p1, Vector2 p2, double t) {
     final oneMinusT = 1 - t;
     return (p0 * oneMinusT * oneMinusT) +
@@ -99,36 +110,40 @@ class Rocket extends PositionComponent with HasGameRef<FireworksGame> {
         (p2 * t * t);
   }
 
-  void explode() {
+  /// Triggers the explosion of the rocket and returns the particle system.
+  ParticleSystemComponent explode() {
     final color = colors[random.nextInt(colors.length)];
-    final explosionDuration = minExplosionDuration +
+    explosionDuration = minExplosionDuration +
         random.nextDouble() * (maxExplosionDuration - minExplosionDuration);
 
     // Calculate fadeOutDuration as 20% of explosionDuration
-    final adjustedFadeOutDuration = explosionDuration * 0.2;
+    adjustedFadeOutDuration = explosionDuration! * 0.2;
+
+    particleCount = random.nextInt(maxParticleCount - minParticleCount + 1) +
+        minParticleCount;
 
     final particleComponent = ParticleSystemComponent(
       particle: Particle.generate(
-        lifespan: explosionDuration,
-        count: random.nextInt(maxParticleCount - minParticleCount + 1) +
-            minParticleCount,
+        lifespan: explosionDuration!,
+        count: particleCount!,
         generator: (i) {
           final theta = random.nextDouble() * 2 * pi;
           final speed = random.nextDouble() * 150 + 50;
 
           return FadingMovingParticle(
-            lifespan: explosionDuration,
+            lifespan: explosionDuration!,
             position: position.clone(),
             speed: Vector2(cos(theta) * speed, sin(theta) * speed),
             acceleration: Vector2(0, 100),
             radius: 3,
             baseColor: color,
-            fadeOutDuration: adjustedFadeOutDuration,
+            fadeOutDuration: adjustedFadeOutDuration!,
           );
         },
       ),
     );
 
     gameRef.add(particleComponent);
+    return particleComponent;
   }
 }
