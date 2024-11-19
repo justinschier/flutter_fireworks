@@ -23,3 +23,7 @@
 ## 1.0.5
 
 - Update Fireworks Demo configuration.
+
+## 1.0.6
+
+- Add test coverage.
