@@ -55,11 +55,27 @@ class FireworksController {
   // Add a list to keep track of timers
   final List<Timer> _timers = [];
 
+  // void fireSingleRocket({Color? color, Color? rocketColor}) {
+  //   if (_disposed) return;
+
+  //   flameGame.launchRocket(
+  //     colors: [color ?? (colors..shuffle()).first],
+  //     rocketColor: rocketColor ?? this.rocketColor,
+  //     minExplosionDuration: minExplosionDuration,
+  //     maxExplosionDuration: maxExplosionDuration,
+  //     minParticleCount: minParticleCount,
+  //     maxParticleCount: maxParticleCount,
+  //     fadeOutDuration: fadeOutDuration,
+  //   );
+  // }
   void fireSingleRocket({Color? color, Color? rocketColor}) {
     if (_disposed) return;
 
+    final colorList = List<Color>.from(colors);
+    colorList.shuffle();
+
     flameGame.launchRocket(
-      colors: [color ?? (colors..shuffle()).first],
+      colors: [color ?? colorList.first],
       rocketColor: rocketColor ?? this.rocketColor,
       minExplosionDuration: minExplosionDuration,
       maxExplosionDuration: maxExplosionDuration,
