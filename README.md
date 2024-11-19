@@ -1,6 +1,7 @@
 # Flutter Fireworks 🎆
 
 ![Pub Version](https://img.shields.io/pub/v/flutter_fireworks)
+![Pub Points](https://img.shields.io/pub/points/flutter_fireworks)
 
 A beautiful, customizable fireworks effect for Flutter apps, built using the Flame package. Add some celebratory flair to your app with stunning animations of rockets and fireworks bursting in vibrant colors.
 
