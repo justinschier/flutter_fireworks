@@ -13,33 +13,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout the code
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      # Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    # Set up Flutter
-    - name: Set up Flutter
-      uses: subosito/flutter-action@v2
-      with:
-        flutter-version: stable
+      # Set up Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.24.5
 
-    # Cache dependencies
-    - name: Cache Flutter dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.pub-cache
-        key: ${{ runner.os }}-pub-cache-${{ hashFiles('**/pubspec.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-pub-cache-
+      # Cache dependencies
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.pub-cache
+          key: ${{ runner.os }}-pub-cache-${{ hashFiles('**/pubspec.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-cache-
 
-    # Install dependencies
-    - name: Install dependencies
-      run: flutter pub get
+      # Install dependencies
+      - name: Install dependencies
+        run: flutter pub get
 
-    # Analyze the code
-    - name: Analyze Flutter code
-      run: flutter analyze
+      # Analyze the code
+      - name: Analyze Flutter code
+        run: flutter analyze
 
-    # Run tests
-    - name: Run Flutter tests
-      run: flutter test
+      # Run tests
+      - name: Run Flutter tests
+        run: flutter test
