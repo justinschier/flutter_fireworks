@@ -40,6 +40,7 @@ class FireworksDisplayState extends State<FireworksDisplay> {
   @override
   Widget build(BuildContext context) {
     return IgnorePointer(
+      key: const Key('fireworksDisplay_ignorePointer'),
       child: GameWidget(game: _flameGame),
     );
   }

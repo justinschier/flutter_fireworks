@@ -1,5 +1,9 @@
 # Flutter Fireworks 🎆
 
+![Pub Version](https://img.shields.io/pub/v/flutter_fireworks)
+![Pub Points](https://img.shields.io/pub/points/flutter_fireworks)
+![Flutter Tests](https://github.com/justinschier/flutter_fireworks/actions/workflows/dart-tests.yml/badge.svg)
+
 A beautiful, customizable fireworks effect for Flutter apps, built using the Flame package. Add some celebratory flair to your app with stunning animations of rockets and fireworks bursting in vibrant colors.
 
 ## Features
@@ -27,5 +31,5 @@ Add `flutter_fireworks` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_fireworks: ^1.0.5
+  flutter_fireworks: ^1.0.6
 ```
