@@ -27,3 +27,7 @@
 ## 1.0.6
 
 - Add test coverage.
+
+## 1.0.7
+
+- Set up automated publishing to pub.dev
