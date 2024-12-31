@@ -141,7 +141,10 @@ void main() {
         game.render(canvas);
         final picture = recorder.endRecording();
 
-        expect(rocket.paint.color.value, rocket.rocketColor.value);
+        expect(rocket.paint.color.a, closeTo(rocket.rocketColor.a, 1e-6));
+        expect(rocket.paint.color.r, closeTo(rocket.rocketColor.r, 1e-6));
+        expect(rocket.paint.color.g, closeTo(rocket.rocketColor.g, 1e-6));
+        expect(rocket.paint.color.b, closeTo(rocket.rocketColor.b, 1e-6));
 
         // Dispose of the picture
         picture.dispose();

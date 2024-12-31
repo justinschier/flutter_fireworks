@@ -31,3 +31,7 @@
 ## 1.0.7
 
 - Set up automated publishing to pub.dev
+
+## 1.0.8
+
+- Upgrade to Flutter 3.27.1
