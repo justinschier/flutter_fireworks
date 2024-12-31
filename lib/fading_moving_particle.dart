@@ -61,7 +61,7 @@ class FadingMovingParticle extends Particle {
     }
 
     final paint = Paint()
-      ..color = baseColor.withOpacity(opacity)
+      ..color = baseColor.withValues(alpha: opacity)
       ..style = PaintingStyle.fill;
 
     canvas.drawCircle(position.toOffset(), radius, paint);

@@ -80,7 +80,7 @@ class _FireworksDemoState extends State<FireworksDemo> {
           ),
           tooltip: 'Fire Multiple Rockets',
           shape: const CircleBorder(),
-          backgroundColor: Colors.white.withOpacity(0.6),
+          backgroundColor: Colors.white.withValues(alpha: 0.6),
           foregroundColor: Colors.black,
           child: const Icon(Icons.keyboard_double_arrow_up, size: 32),
         ),
@@ -89,7 +89,7 @@ class _FireworksDemoState extends State<FireworksDemo> {
       bottomNavigationBar: BottomAppBar(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         height: 44,
-        color: Colors.white.withOpacity(0.05),
+        color: Colors.white.withValues(alpha: 0.05),
         shape: const CircularNotchedRectangle(),
         notchMargin: 10,
         child: Row(

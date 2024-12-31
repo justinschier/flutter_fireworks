@@ -86,7 +86,7 @@ class _StarfieldPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = Colors.white.withOpacity(0.8);
+    final paint = Paint()..color = Colors.white.withValues(alpha: 0.8);
     for (final star in stars) {
       final x = star.position.dx * size.width;
       final y = star.position.dy * size.height;

@@ -76,7 +76,7 @@ void main() {
 
       final drawCircleCall = drawCircleCalls.first;
       final paintUsed = drawCircleCall.paint;
-      expect(paintUsed.color.opacity, closeTo(1.0, 1e-6),
+      expect(paintUsed.color.a, closeTo(1.0, 1e-6),
           reason:
               'Opacity should be 1.0 when remainingLife == fadeOutDuration');
     });
@@ -108,7 +108,7 @@ void main() {
       final drawCircleCall = drawCircleCalls.first;
       final paintUsed = drawCircleCall.paint;
       final expectedOpacity = (0.4 / 0.5).clamp(0.0, 1.0);
-      expect(paintUsed.color.opacity, closeTo(expectedOpacity, 1e-6),
+      expect(paintUsed.color.a, closeTo(expectedOpacity, 1e-6),
           reason:
               'Opacity should be proportional to remainingLife / fadeOutDuration');
     });
@@ -137,7 +137,7 @@ void main() {
 
       final drawCircleCall = drawCircleCalls.first;
       final paintUsed = drawCircleCall.paint;
-      expect(paintUsed.color.opacity, equals(1.0),
+      expect(paintUsed.color.a, equals(1.0),
           reason: 'Opacity should be 1.0 when remainingLife > fadeOutDuration');
     });
 
